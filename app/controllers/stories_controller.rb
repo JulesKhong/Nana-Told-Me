@@ -1,6 +1,7 @@
 class StoriesController < ApplicationController
   def index
     @stories = Story.all
+    
   end
 
   def new
@@ -9,6 +10,7 @@ class StoriesController < ApplicationController
 
   def create
     @story = Story.new(story_params)
+
     if @story.save
       flash[:notice] = "Your story has been added successfully!"
       redirect_to root_path
