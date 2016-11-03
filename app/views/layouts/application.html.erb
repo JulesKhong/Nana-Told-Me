@@ -28,9 +28,12 @@
           <li><div class="flash"><%= flash[:alert] %></div></li>
         <% end %>
         <% if user_signed_in? %>
-          <li><%= link_to "Hear a Story", galleries_path %></li>
-          <li><%= link_to "Share a Story", new_story_path %></li>
-          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+
+          <% if current_user.admin %>
+            <li><%= link_to "Hear a Story", galleries_path %></li>
+            <li><%= link_to "Share a Story", new_story_path %></li>
+            <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <% end %>
         <% else %>
           <li><%= link_to "Hear a Story", galleries_path %></li>
           <li><%= link_to "Login", new_user_session_path %></li>
