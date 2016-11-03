@@ -12,9 +12,9 @@
         <% if story.image.exists? %>
           <% if story.image!=nil %>
             <%= image_tag(story.image)%>
+          <% end %>
           <% else %>
             <%= image_tag(random_flower)%>
-          <% end %>
         <% end %>
         <p><em><%= story.date %></em></p>
         <h3><%= story.title %></h3>
