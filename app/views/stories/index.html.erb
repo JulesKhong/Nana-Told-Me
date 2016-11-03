@@ -9,7 +9,7 @@
   <% if @stories.any? %>
     <% @stories.each do |story|%>
       <div class="col-sm-3 story">
-        <% if story.image!=nil %>
+        <% if story.image %>
           <%= image_tag(story.image)%>
           <% else %>
           <%= image_tag(random_flower)%>
