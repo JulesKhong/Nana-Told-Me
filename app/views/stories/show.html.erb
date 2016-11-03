@@ -13,5 +13,11 @@
     <p>
       <%= @story.details %>
     </p>
+    <% if user_signed_in? %>
+      <% if current_user.admin %>
+        <%= link_to "Edit |", edit_story_path(@story) %>
+        <%= link_to "Delete", story_path(@story), :data => {:confirm => "You sure?", :method => "delete"} %>
+      <% end %>
+    <% end %>
   </div>
 </div>
