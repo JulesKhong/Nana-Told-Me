@@ -1,0 +1,17 @@
+<div class="flex top-margin story-color">
+  <div class="story-show">
+    <%= image_tag(@story.image)%>
+    <h1><%= @story.title %></h1>
+    <p class="uppcase">
+      <strong><%= @story.location %></strong>
+    </p>
+    <% if @story.date %>
+    <p>
+      <em><%= @story.date.strftime("%B %d, %Y") %></em>
+    </p>
+    <% end %>
+    <p>
+      <%= @story.details %>
+    </p>
+  </div>
+</div>

@@ -1,7 +1,7 @@
-class StoriesController < ApplicationController
+class GalleriesController < ApplicationController
 
   def index
-    @images = Gallery.all
+    @nanastories = Gallery.all
   end
 
 end

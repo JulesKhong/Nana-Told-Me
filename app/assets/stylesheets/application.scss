@@ -28,6 +28,35 @@
    background-size: cover;
  }
 
+ .navbar-header > .navbar-brand {
+   color: white;
+  //  font-family: "adage-script-jf";
+   font-family: "mrs-eaves";
+   font-size: 2em;
+ }
+
+ .navbar-inverse {
+   background-color: #21282A;
+ }
+
+ ul.nav.navbar-nav.navbar-right > li > a{
+   color: #FFF4F1;
+   font-family: "Helvetica Neue";
+   font-weight: lighter;
+   letter-spacing: 1px;
+   font-size: 14px;
+ }
+
+hr {
+  border-color: #4D5157;
+  opacity: .15;
+}
+ .flash {
+   color: white;
+   margin-top: 15px;
+   margin-right: 20px;
+ }
+
  .images {
    width: 50%;
    img {
@@ -51,7 +80,110 @@
     background: linear-gradient(whitesmoke, white); /*Standard*/
   }
 
+  .new-story {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100vh;
+    background: url(../images/stone-arch-828730_1280.jpg) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .story {
+    width: 30%;
+    border-right: 1px solid whitesmoke;
+    padding: 20px 20px;
+    img {
+      width: 100%;
+    }
+  }
+
+  .story-color {
+    // background: url(../images/paper.png) center center repeat;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
+    // height: 100vh;
+    background-color: whitesmoke;
+  }
+  .uppcase {
+    font-variant: small-caps;
+  }
+
+  .story-show {
+    img {
+      max-height: 50vh;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    width: 50vw;
+    height: auto;
+    margin: 20px 5%;
+    padding: 20px;
+    background-color: #fff; opacity: 0.82; filter: alpha(opacity=.86);
+    border-radius: 10px;
+  }
   .row {
     margin: 0;
     padding: 0;
+  }
+
+  .top-margin {
+    margin-top: 50px;
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    height: 200px;
+  }
+  .btn {
+    margin-top: 10px;
+  }
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.page-canvas {
+  margin-top: 20px;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+  .edit-form {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px auto;
+    width: 50vw;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px 20px 20px 20px;
+    background-color: #fff; opacity: 0.92; filter: alpha(opacity=.86);
+  }
+
+  h1, h3, p {
+    font-family: "mrs-eaves";
+  }
+  p {
+    font-size: 1.25em;
+  }
+
+  h3, p  {
+    color: #4D5157;
+  }
+
+  .intro {
+    text-overflow: ellipsis;
+    height: 80px;
+    overflow: hidden;
+  }
+
+  a {
+  color: #BC566A;
   }

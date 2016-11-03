@@ -1,24 +1,26 @@
 <div class="landing">
   <div class="col-sm-6 col-sm-offset-3">
-    <h1>"We're not all good, and we're not all bad. We're very human. And we love each other."</h1>
-    <h3>&#8212; Nana</h3>
+    <h1>"We're not all good, and we're not all bad. We're very human. And we love each other."<br>
+    &#8212; Nana &#8212;</h1>
   </div>
 </div>
 
-<div class="row">
+<div class="flex page-canvas">
   <% if @stories.any? %>
     <% @stories.each do |story|%>
-    <div class="row storyline">
-      <div class="col-sm-6 date">
-        <h3><%= story.date %></h3>
-      </div>
-      <div class="col-sm-6 images">
+      <div class="col-sm-3 story">
+        <% if story.image %>
+          <%= image_tag(story.image)%>
+        <% end %>
+        <p><em><%= story.date %></em></p>
         <h3><%= story.title %></h3>
-
+        <p class="intro">
+          <%= story.details %>
+        </p>
+        <p>
+          <%= link_to "Read more...", story_path(:id => story.id) %>
+        </p>
       </div>
-
-    </div>
-    <hr>
     <% end %>
   <% end %>
 </div>
