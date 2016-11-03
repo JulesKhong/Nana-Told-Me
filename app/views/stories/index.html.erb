@@ -9,10 +9,12 @@
   <% if @stories.any? %>
     <% @stories.each do |story|%>
       <div class="col-sm-3 story">
-        <% if story.image %>
-          <%= image_tag(story.image)%>
+        <% if story.image.exists? %>
+          <% if story.image!=nil %>
+            <%= image_tag(story.image)%>
           <% else %>
-          <%= image_tag(random_flower)%>
+            <%= image_tag(random_flower)%>
+          <% end %>
         <% end %>
         <p><em><%= story.date %></em></p>
         <h3><%= story.title %></h3>

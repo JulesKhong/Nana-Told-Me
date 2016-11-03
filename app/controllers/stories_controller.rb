@@ -31,7 +31,7 @@ class StoriesController < ApplicationController
 
   def update
     @story= Story.find(params[:id])
-    if @story.update(post_params)
+    if @story.update(story_params)
       redirect_to stories_path
     else
       render :edit
